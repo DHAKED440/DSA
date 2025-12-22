@@ -12,8 +12,11 @@ int main () {
   for(int i=1; i<n; i++){
    if(num[i]==num[i-1]){
       freq++;
-   }
-   if(freq > n/2){
+   } else {
+freq=1;
+ans=num[i];
+}
+if(freq > n/2){
       cout<< "majority element = " << num[i] << endl;
       break;
    }
