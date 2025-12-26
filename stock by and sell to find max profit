@@ -1,0 +1,24 @@
+ #include<iostream>
+#include<vector>
+#include<limits.h>
+using namespace std;
+
+int Maxprofit(int prices[], int n){
+  int MP=0,bestbuy=prices[0];
+  for (int i=1; i<n; i++){
+      if(prices[i]>bestbuy){
+        MP=max(MP,prices[i]-bestbuy);
+      }
+      bestbuy=min(bestbuy,prices[i]);
+
+  }
+  return MP;
+}
+
+int main(){
+  int n=6;
+  int prices[]={7,1,5,3,6,4};
+  int ans=Maxprofit(prices,n);
+  cout<<"Max profit = " << ans << endl;
+  return 0;
+}
