@@ -1,0 +1,23 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int conwithmaxwater(vector<int> &height){
+    int n=sizeof(height);
+    int MW=0;
+    for(int i=0; i<n; i++){
+        for (int j=i+1; j<n; j++){
+            int w=j-i;
+            int h=min(height[i],height[j]);
+            int area=h*w;
+            MW=max(MW,area);
+        }
+    }
+    return MW;
+}
+int main () {
+    vector<int>height={1,8,6,2,5,4,8,3,7};
+    int maxwater=conwithmaxwater(height);
+    cout <<"containewr with  maxwater : " << maxwater << endl;
+    return 0;
+}
