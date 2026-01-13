@@ -3,7 +3,7 @@
 using namespace std;
 
 int conwithmaxwater(vector<int> &height){
-    int n=sizeof(height);
+    int n=height.size();
     int MW=0;
     for(int i=0; i<n; i++){
         for (int j=i+1; j<n; j++){
