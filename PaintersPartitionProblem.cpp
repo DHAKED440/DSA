@@ -43,8 +43,9 @@ int painterpartition(vector<int>& arr , int M){
 }
 
 int main () {
-   vector<int>arr={10,10 , 10 , 10};
+   vector<int>arr={10,20,30,40}; // length of boards
    int M=2; //no. of painters;
-     cout << "min time to paint : " << painterpartition(arr , M);
+     cout << "min time to paint : " << painterpartition(arr , M); 
+     // ans vo hoga jis case me  max time baki cases ke max se kam hoga 
      return 0;
 }
