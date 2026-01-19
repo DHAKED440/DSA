@@ -26,6 +26,9 @@ bool isvalid(vector<int>& arr , int N , int m , int maxallowedpages ){
 
 int bookallocation( vector<int> & arr , int m , int N){
     int n=arr.size();
+    if( m > N) {
+        return -1;
+    }
     int sum=0;
     for(int i=0; i<n; i++){
         sum+=arr[i];
