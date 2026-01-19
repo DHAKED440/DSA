@@ -3,14 +3,14 @@
 #include<vector>
 using namespace std;
 
-bool isvalid(vector<int>& arr , int n , int M , int mintimetopaint ){
+bool isvalid(vector<int>& arr , int n , int M , int maxtimetopaint ){
     int painterequired=1;
     int currtime=0;
     for(int i=0; i<n; i++){
-          if(arr[i] > mintimetopaint){
+          if(arr[i] > maxtimetopaint){
             return false;
           }
-          if(arr[i] + currtime <= mintimetopaint){
+          if(arr[i] + currtime <= maxtimetopaint){
             currtime+=arr[i];
           } else {
             painterequired++;
