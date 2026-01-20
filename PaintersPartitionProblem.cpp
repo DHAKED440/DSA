@@ -1,5 +1,6 @@
 // painter's partition problem
 #include<iostream>
+#include<limits.h>
 #include<vector>
 using namespace std;
 
@@ -26,8 +27,12 @@ bool isvalid(vector<int>& arr , int n , int M , int maxtimetopaint ){
 int painterpartition(vector<int>& arr , int M){
     int sum=0;
     int n=arr.size();
+    int min=INT_MIN;
     for(int i=0; i<n; i++){
         sum+=arr[i];
+        if(arr[i] > min){
+            min=arr[i];
+        }
     }
     int st=0 , end=sum , ans=-1;
     while(st <= end){
