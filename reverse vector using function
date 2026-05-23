@@ -1,0 +1,42 @@
+#include<iostream>
+#include<vector>
+
+using namespace std;
+int reversevector(vector<int> &rev ,int n){
+   int start=0,end=n-1;
+   for(int i=0; i<n; i++){
+      if(start < end ){
+         swap(rev[start],rev[end]);
+         start++;
+         end--;
+      }
+   }
+for(int i=0; i<n; i++){
+   return rev[i];
+} 
+}
+
+int main() {
+   vector<int>rev;
+int n;
+cout<< "Enter the value of n : ";
+cin >> n;
+for(int i=0; i<n; i++){
+   int x;
+   cin>> x;
+   rev.push_back(x);
+}
+
+cout<< "Elements of vector : ";
+for(int i=0; i<n; i++){
+   cout << rev[i] << " "; 
+}
+
+cout << endl;
+reversevector(rev , n);
+ cout << "After the swaping vector elements : ";
+for(int i=0; i<n; i++){
+   cout << rev[i] << " ";
+} 
+return 0;
+}
